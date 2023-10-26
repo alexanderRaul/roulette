@@ -1,0 +1,93 @@
+Ruleta:
+
+Generación de Números Aleatorios (aleatoriedad):
+Conceptos POO:
+Encapsulación: La generación de números aleatorios se maneja encapsulando la lógica dentro de la clase Roulette. Se utiliza un campo privado random y métodos privados para generar números aleatorios.
+Abstracción: La generación de números aleatorios se presenta de manera abstracta, permitiendo que la implementación interna sea manejada por la clase Roulette.
+Polimorfismo: Puede haber diferentes estrategias (BetStrategy) para procesar diferentes tipos de apuestas.
+Tipos de Apuestas:
+Conceptos POO:
+Encapsulación: Cada tipo de apuesta se representa mediante una clase, encapsulando su lógica interna.
+Herencia: La relación entre diferentes tipos de apuestas puede ser modelada utilizando herencia si comparten características comunes.
+Polimorfismo: Se puede utilizar polimorfismo para procesar diferentes tipos de apuestas de manera uniforme.
+Mesa:
+
+Distribución de Fichas:
+Conceptos POO:
+Encapsulación: La lógica de la distribución de fichas se encapsula en la clase Table.
+Abstracción: La mesa se presenta como una entidad independiente, abstractizando detalles internos.
+Composición: Puede haber una composición de fichas dentro de la mesa para manejar distribuciones específicas.
+Interacciones con la Ruleta:
+Conceptos POO:
+Interfaz: Existe una interfaz clara entre la mesa y la ruleta, lo que facilita la comunicación entre objetos.
+Encapsulación: Se evita el acceso directo a detalles internos de la ruleta, y las interacciones se gestionan mediante una interfaz.
+Reglas del Juego:
+Conceptos POO:
+Abstracción: Las reglas del juego se abstraen en componentes modulares, lo que facilita cambios y extensiones.
+Encapsulación: La lógica de las reglas del juego se encapsula en componentes independientes.
+Apostadores:
+
+Registro:
+Conceptos POO:
+Encapsulación: El registro se encapsula dentro de la clase Player, limitándose a ingresar el nombre del apostador.
+Realización de Apuestas:
+Conceptos POO:
+Encapsulación: Los métodos de apuesta se encapsulan dentro de la clase Player, reflejando las reglas del juego.
+Polimorfismo: Dependiendo del tipo de apuesta, se pueden utilizar diferentes estrategias de apuesta.
+Gestión de Fondos:
+Conceptos POO:
+Encapsulación: La gestión de fondos se encapsula dentro de la clase Player, evitando el acceso directo a la información financiera.
+Seguridad: Se considera la posibilidad de limitar las operaciones financieras a transacciones seguras.
+Interacción con la Mesa y Ruleta:
+Conceptos POO:
+Encapsulación: Los métodos de interacción se diseñan para proporcionar información clara y actualizada, minimizando el acoplamiento con la lógica de juego.
+
+1. Ruleta
+a. Generación de Números Aleatorios (aleatoriedad):
+Enfoque:
+Utiliza un generador de números aleatorios de alta calidad en Java para garantizar una distribución uniforme. [Hecho]
+Establecer una semilla si es necesario para reproducir resultados en pruebas. [No Implementado]
+Evita patrones predecibles en la secuencia de números generados. [No Verificable directamente]
+La calidad de la aleatoriedad es crucial para la integridad del juego. [Implementado y Mencionado]
+b. Tipos de Apuestas:
+Enfoque:
+Diseñar una estructura para manejar diferentes tipos de apuestas de manera modular. [Hecho]
+Permite la extensión fácil para añadir nuevos tipos de apuestas en el futuro. [Hecho]
+La lógica de procesamiento de apuestas debe ser lo suficientemente flexible para adaptarse a nuevas reglas sin reescribir todo el sistema. [Hecho]
+c. Estados de la Ruleta:
+Enfoque:
+Emplear un enfoque basado en estados para representar la evolución del juego (girar, detenerse, resultado). [No Implementado]
+Implementar transiciones claras entre estados. [No Implementado]
+2. Mesa
+a. Distribución de Fichas:
+Enfoque:
+Diseña un sistema de gestión de fichas que sea independiente del juego específico. [Hecho]
+Permite ajustes en la distribución de fichas sin afectar otros aspectos del juego. [Hecho]
+b. Interacciones con la Ruleta:
+Enfoque:
+Crea una interfaz clara entre la mesa y la ruleta [Hecho]
+La mesa debe estar correctamente sincronizada con los resultados de la ruleta. [Hecho]
+c. Reglas del Juego:
+Enfoque:
+Abstractiza las reglas del juego en componentes modulares para facilitar cambios y extensiones. [Hecho]
+La coherencia y la claridad en la aplicación de reglas son cruciales para la experiencia de juego. [Mencionado]
+3. Apostadores
+a. Registro
+Enfoque:
+El registro se limita a ingresar el nombre del apostador. [Hecho]
+b. Realización de Apuestas:
+Enfoque:
+Diseña métodos de apuesta que reflejen de cerca las reglas del juego. [Hecho]
+Maneja situaciones donde el apostador pueda realizar múltiples apuestas. [Hecho]
+c. Gestión de Fondos:
+Enfoque:
+Implementa un sistema de gestión de fondos que sea resistente a errores y fraudes. [Hecho]
+Considera la posibilidad de limitar las operaciones financieras a transacciones seguras. [Hecho]
+d. Interacción con la Mesa y Ruleta:
+Enfoque:
+Diseña métodos de interacción que proporcionen información clara y actualizada. [Hecho]
+Minimiza el acoplamiento entre los apostadores y la lógica de juego. [Hecho]
+Resumen:
+La mayoría de los puntos de la rúbrica están implementados o mencionados en el código proporcionado.
+Sin embargo, algunos puntos específicos, como la implementación de estados en la ruleta, la semilla en la generación de números aleatorios, y algunas aclaraciones en las reglas del juego no están implementados o mencionados.
+El código parece seguir en gran medida los principios de la programación orientada a objetos y aborda las preocupaciones identificadas en la rúbrica.
